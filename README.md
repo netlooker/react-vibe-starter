@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+# React Vibe Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React 19 showcase demonstrating "Vibe Coding" principles with Tailwind CSS 4, TypeScript, and Vite. Experience how AI-assisted development can transform your workflow.
 
-Currently, two official plugins are available:
+## What is Vibe Coding?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vibe Coding, coined in early 2025, is an intuitive approach to programming that emphasises coding by "feel" rather than strict planning. Developers communicate with AI using natural language to rapidly build interfaces based on the desired "vibe" or experience.
 
-## Expanding the ESLint configuration
+Key characteristics:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Intuition-Driven Development**: Making decisions based on what feels right for users
+- **Natural Language Prompts**: Using plain language like "make it friendlier" or "add a subtle bounce"
+- **Rapid Iteration**: Quick cycles of prompt → code → run → feedback
+- **Flow Over Formality**: Maintaining creative momentum without getting bogged down in details
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Showcase Features
+
+- ✨ **Interactive Vibe Demo**: Experience different button "vibes" through a simple interface
+- 💬 **Conversation Simulator**: See how developers might "talk" to AI about code changes
+- 🔍 **Principles Explorer**: Understand the benefits and challenges of Vibe Coding
+- 🌓 **Smart Theme Switching**: Seamless dark/light mode with system preference detection
+- 🎨 **Modern UI Elements**: Carefully crafted components with subtle animations
+
+## Tech Stack
+
+- **React 19**: Latest functional components and hooks patterns
+- **TypeScript**: Strong type safety with strict mode
+- **Tailwind CSS 4**: Utility-first styling with custom animations
+- **Vite**: Lightning-fast development experience
+- **Lucide React**: Crisp, consistent SVG icons
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or higher
+- npm 9.0 or higher
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/netlooker/react-vibe-starter.git
+
+# Navigate to project directory
+cd react-vibe-starter
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173` to see the application in action.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+The project follows a feature-based organisation pattern:
+
 ```
+react-vibe-starter/
+├── src/
+│   ├── assets/         # Component-used assets
+│   ├── components/     # Shared UI components
+│   ├── features/       # Feature-specific modules
+│   │   ├── hero/       # Hero section components
+│   │   ├── principles/ # Vibe coding concepts
+│   │   ├── theme/      # Dark/light theming
+│   │   ├── ui/         # Reusable UI elements
+│   │   └── vibe-demo/  # Interactive demonstrations
+│   ├── App.tsx         # Main application component
+│   ├── index.css       # Global styles
+│   └── main.tsx        # Application entry point
+└── [config files]      # Vite, TypeScript and Tailwind configs
+```
+
+## Design Philosophy
+
+This project demonstrates:
+
+- **Feature-Based Code Organisation**: Grouping related components by domain rather than type
+- **Component Granularity**: Small, focused components with single responsibilities
+- **Responsive Design**: Fully adaptive layout for all devices
+- **Animation Subtlety**: Tasteful transitions that enhance rather than distract
+- **Accessibility**: Semantic HTML with proper ARIA attributes
+
+## Try Vibe Coding Yourself
+
+The interactive demo shows how different "vibes" (fun, professional, energetic, calm) translate to different UI implementations through simple language descriptions rather than technical specifications.
+
+## Available Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
+- `npm run lint`: Check code quality
+- `npm run format`: Format code with Prettier
+- `npm run validate`: Run all checks
+
+## Licence
+
+MIT
