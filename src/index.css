@@ -1,68 +1,157 @@
+@import "tailwindcss";
+
+/* Configure dark mode based on class strategy */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  background-color: #121212;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Neon effects - rewritten to support dark mode better */
+.neon-pink {
+  color: #ff1b84;
+  text-shadow: 0 0 5px rgba(255, 27, 132, 0.7), 
+               0 0 10px rgba(255, 27, 132, 0.5);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.dark .neon-pink {
+  color: #ff5da3;
+  text-shadow: 0 0 5px rgba(255, 93, 163, 0.7), 
+               0 0 10px rgba(255, 93, 163, 0.5);
+}
+
+.neon-cyan {
+  color: #00e9f4;
+  text-shadow: 0 0 5px rgba(0, 233, 244, 0.7), 
+               0 0 10px rgba(0, 233, 244, 0.5);
+}
+
+.dark .neon-cyan {
+  color: #5df2fa;
+  text-shadow: 0 0 5px rgba(93, 242, 250, 0.7), 
+               0 0 10px rgba(93, 242, 250, 0.5);
+}
+
+.neon-button {
+  background: linear-gradient(90deg, #ff1b84, #00e9f4);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 0 5px rgba(255, 27, 132, 0.7),
+              0 0 10px rgba(0, 233, 244, 0.5);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Base theme colors - will be controlled by Tailwind dark: variant */
+body {
+  background-color: white;
+  color: #213547;
+}
+
+.dark body {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 8px;
+  cursor: pointer;
+  color: currentColor;
 }
