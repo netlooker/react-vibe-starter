@@ -28,6 +28,7 @@ This applies dark mode styles to any element inside a parent with the `.dark` cl
 ### Component Breakdown
 
 1. **ThemeContext.tsx**
+
    - Creates a React context and provider for theme state
    - Manages the theme state and provides a toggle function
    - Syncs the theme with both React state and DOM classes
@@ -57,7 +58,7 @@ import { useTheme } from './features/theme/ThemeContext';
 
 function MyComponent() {
   const { isDarkMode, toggleDarkMode } = useTheme();
-  
+
   return (
     // Component that can react to theme state
   );

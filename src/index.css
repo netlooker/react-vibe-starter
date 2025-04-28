@@ -4,7 +4,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
@@ -20,26 +24,30 @@ body {
 /* Neon effects - rewritten to support dark mode better */
 .neon-pink {
   color: #ff1b84;
-  text-shadow: 0 0 5px rgba(255, 27, 132, 0.7), 
-               0 0 10px rgba(255, 27, 132, 0.5);
+  text-shadow:
+    0 0 5px rgba(255, 27, 132, 0.7),
+    0 0 10px rgba(255, 27, 132, 0.5);
 }
 
 .dark .neon-pink {
   color: #ff5da3;
-  text-shadow: 0 0 5px rgba(255, 93, 163, 0.7), 
-               0 0 10px rgba(255, 93, 163, 0.5);
+  text-shadow:
+    0 0 5px rgba(255, 93, 163, 0.7),
+    0 0 10px rgba(255, 93, 163, 0.5);
 }
 
 .neon-cyan {
   color: #00e9f4;
-  text-shadow: 0 0 5px rgba(0, 233, 244, 0.7), 
-               0 0 10px rgba(0, 233, 244, 0.5);
+  text-shadow:
+    0 0 5px rgba(0, 233, 244, 0.7),
+    0 0 10px rgba(0, 233, 244, 0.5);
 }
 
 .dark .neon-cyan {
   color: #5df2fa;
-  text-shadow: 0 0 5px rgba(93, 242, 250, 0.7), 
-               0 0 10px rgba(93, 242, 250, 0.5);
+  text-shadow:
+    0 0 5px rgba(93, 242, 250, 0.7),
+    0 0 10px rgba(93, 242, 250, 0.5);
 }
 
 .neon-button {
@@ -50,8 +58,9 @@ body {
   padding: 10px 24px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(255, 27, 132, 0.7),
-              0 0 10px rgba(0, 233, 244, 0.5);
+  box-shadow:
+    0 0 5px rgba(255, 27, 132, 0.7),
+    0 0 10px rgba(0, 233, 244, 0.5);
 }
 
 /* Base theme colors - will be controlled by Tailwind dark: variant */

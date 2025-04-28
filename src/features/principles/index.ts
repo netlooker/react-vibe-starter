@@ -1,1 +1,1 @@
-export * from './VibePrinciples';
+export * from "./VibePrinciples";
