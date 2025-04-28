@@ -1,103 +1,111 @@
-import { Sparkles, BrainCircuit, Code2, Bot, Github, Heart } from 'lucide-react'
+import { Sparkles, Github, Heart } from 'lucide-react'
 import './index.css'
 import { ThemeToggle } from './features/theme'
-import { Card } from './features/ui/Card'
+import { HeroSection } from './features/hero'
+import { VibeDemo } from './features/vibe-demo'
+import { VibePrinciples } from './features/principles'
 
 function App() {
-
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       {/* Header */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-container">
-            <div className="logo-container">
+      <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
               <Sparkles size={24} className="neon-cyan" />
-              <h1 className="neon-pink">Vibe Coding</h1>
+              <h1 className="text-xl font-bold neon-pink">Vibe Coding</h1>
             </div>
 
-            <ThemeToggle />
+            <div className="flex items-center gap-4">
+              <nav>
+                <ul className="flex gap-6">
+                  <li><a href="#principles" className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors">Principles</a></li>
+                  <li><a href="#demo" className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors">Demo</a></li>
+                  <li><a href="#about" className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors">About</a></li>
+                </ul>
+              </nav>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero */}
-      <main>
-        <section className="hero">
-          <div className="container">
-            <h1>
-              <span className="neon-pink">Vibe</span>{' '}
-              <span className="neon-cyan">Coding</span> with AI
-            </h1>
+      <HeroSection />
 
-            <p>
-              Build beautiful, modern web applications faster than ever with AI-powered coding.
-              Elevate your development workflow using AI.
-            </p>
+      {/* Main Content */}
+      <main className="py-12">
+        <div className="container mx-auto px-4 space-y-16">
+          {/* Principles Section */}
+          <section id="principles" className="scroll-mt-20">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Understanding Vibe Coding
+            </h2>
+            <VibePrinciples />
+          </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-8">
-              <Card 
-                title="AI Assistance" 
-                description="Get intelligent code suggestions and autocompletions to speed up your development." 
-                icon={<BrainCircuit size={24} className="text-white" />} 
-              />
-              <Card 
-                title="Modern Stack" 
-                description="Built with React 19, TypeScript, and Tailwind CSS for a robust development experience." 
-                icon={<Sparkles size={24} className="text-white" />} 
-              />
-              <Card 
-                title="Clean Code" 
-                description="Maintain high code quality with consistent formatting and best practices." 
-                icon={<Code2 size={24} className="text-white" />} 
-              />
-              <Card 
-                title="Smart Agents" 
-                description="Leverage AI agents to handle repetitive tasks and improve your workflow." 
-                icon={<Bot size={24} className="text-white" />} 
-              />
-            </div>
+          {/* Interactive Demo Section */}
+          <section id="demo" className="scroll-mt-20">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Experience It Yourself
+            </h2>
+            <VibeDemo />
+          </section>
 
-            <button className="neon-button">
-              Get Started
-            </button>
-
-            {/* Dark Mode Demo Section */}
-            <div className="mt-16 mb-8">
-              <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Dark Mode Support</h2>
-              <p className="text-gray-700 dark:text-gray-300 mb-6">
-                Toggle between light and dark modes using the switch in the header. 
-                Our application automatically respects your system preference but allows manual override.
+          {/* About Section */}
+          <section id="about" className="scroll-mt-20 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              About This Project
+            </h2>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-100 dark:border-gray-700">
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                This showcase was created to demonstrate the principles of "Vibe Coding" - an emerging approach 
+                to software development that was coined in early 2025.
               </p>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                <p className="text-gray-800 dark:text-gray-200 text-sm font-mono">
-                  // Example of Tailwind dark mode classes:<br />
-                  &lt;div className="<span className="text-indigo-600 dark:text-indigo-400">bg-white dark:bg-gray-800</span> <span className="text-purple-600 dark:text-purple-400">text-gray-900 dark:text-white</span>"&gt;<br />
-                  &nbsp;&nbsp;Content adapts to your theme preference<br />
-                  &lt;/div&gt;
-                </p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                The term refers to a style where developers leverage AI tools and their intuition to guide 
+                code creation, describing what they want in natural, evocative language instead of manually 
+                crafting every line of code.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                This project itself was built using React 19, TypeScript, and Tailwind CSS 4, following
+                modern best practices while embracing the intuitive nature of vibe coding.
+              </p>
+
+              <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                <h3 className="font-medium text-gray-900 dark:text-white mb-2">
+                  Technical Stack
+                </h3>
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                  <li>React 19 for UI components</li>
+                  <li>TypeScript for type safety</li>
+                  <li>Tailwind CSS 4 for styling</li>
+                  <li>Vite for blazing fast development</li>
+                  <li>Lucide React for beautiful icons</li>
+                </ul>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
+      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <Heart size={16} className="neon-pink" />
-              <span>Made with AI-assisted development</span>
+              <span className="text-gray-600 dark:text-gray-400">Made with AI-assisted development</span>
             </div>
 
-            <p>© 2025 Vibe Coding. All rights reserved.</p>
+            <p className="text-gray-500 dark:text-gray-500">© 2025 Vibe Coding. All rights reserved.</p>
 
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
             >
               <Github size={20} />
               <span>Source Code</span>
