@@ -1,23 +1,38 @@
-# React Vibe Starter
+# TaskFocus
 
-A modern React 19 starter template with Tailwind CSS 4, TypeScript, and Vite. This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A daily task management application with an integrated Pomodoro timer to help you stay focused and productive. Built with React 19, TypeScript, and Tailwind CSS 4.
 
 ## Features
 
-- ⚡ **Vite** — Lightning fast development experience
+- ✅ **Task Management** — Create, edit, and track your daily tasks
+- ⏱️ **Pomodoro Timer** — Stay focused with customizable work and break sessions
 - 🔄 **React 19** — Latest React with hooks and improved performance
 - 🔒 **TypeScript** — Type safety with strict mode enabled
 - 🎨 **Tailwind CSS 4** — Utility-first CSS framework with dark mode support
 - 🌓 **Dark Mode** — Seamless dark/light mode with system preference detection
-- 🧩 **Component Structure** — Clean, feature-based organization
-- 🧹 **ESLint + Prettier** — Code quality and consistent formatting
-- 🔍 **Strict TypeScript** — Configured for maximum type safety
+- 💾 **Local Storage** — Your tasks and settings are saved between sessions
+
+## Task Management Features
+
+- Create tasks with title, description, and priority levels
+- Mark tasks as complete/incomplete
+- Filter tasks by status (all, active, completed)
+- Sort tasks by priority or creation date
+- Edit and delete tasks
+
+## Pomodoro Timer Features
+
+- Customizable work sessions (default: 25 minutes)
+- Short breaks (default: 5 minutes) and long breaks (default: 15 minutes)
+- Session counter to track completed work sessions
+- Sound notifications when sessions end
+- Configurable settings for timer durations and behavior
 
 ## Tech Stack
 
 - **React 19**: Latest functional components and hooks patterns
 - **TypeScript**: Strong type safety with strict mode
-- **Tailwind CSS 4**: Utility-first styling with custom animations
+- **Tailwind CSS 4**: Utility-first styling
 - **Vite**: Lightning-fast development experience
 - **Lucide React**: Crisp, consistent SVG icons
 
@@ -32,10 +47,10 @@ A modern React 19 starter template with Tailwind CSS 4, TypeScript, and Vite. Th
 
 ```bash
 # Clone the repository
-git clone https://github.com/netlooker/react-vibe-starter.git
+git clone https://github.com/yourusername/taskfocus.git
 
 # Navigate to project directory
-cd react-vibe-starter
+cd taskfocus
 
 # Install dependencies
 npm install
@@ -51,28 +66,21 @@ Visit `http://localhost:5173` to see the application in action.
 The project follows a clean, feature-based organization pattern:
 
 ```
-react-vibe-starter/
+taskfocus/
 ├── src/
-│   ├── assets/         # Component-used assets
 │   ├── components/     # Shared UI components
+│   │   ├── tasks/      # Task-related components
+│   │   ├── pomodoro/   # Pomodoro timer components
+│   │   └── ui/         # Basic UI components
 │   ├── features/       # Feature-specific modules
+│   │   ├── tasks/      # Task management logic
+│   │   ├── pomodoro/   # Pomodoro timer logic
 │   │   └── theme/      # Dark/light theming
 │   ├── App.tsx         # Main application component
 │   ├── index.css       # Global styles
 │   └── main.tsx        # Application entry point
 └── [config files]      # Vite, TypeScript and Tailwind configs
 ```
-
-## Design Philosophy
-
-This starter template emphasizes:
-
-- **Feature-Based Organization**: Grouping related components by domain rather than type
-- **Type Safety**: Strict TypeScript configuration for robust code
-- **Responsive Design**: Fully adaptive layout for all devices
-- **Dark Mode**: Class-based theming with system preference detection
-- **Performance**: Optimized for fast development and production builds
-- **Accessibility**: Semantic HTML with proper ARIA attributes
 
 ## Available Scripts
 
