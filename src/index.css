@@ -149,3 +149,50 @@ html {
   background: rgba(30, 30, 30, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+/* Bike Rental Specific Styles */
+.clip-path-wave {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 60%,
+    5% 65%,
+    10% 70%,
+    15% 65%,
+    20% 60%,
+    25% 65%,
+    30% 70%,
+    35% 65%,
+    40% 60%,
+    45% 65%,
+    50% 70%,
+    55% 65%,
+    60% 60%,
+    65% 65%,
+    70% 70%,
+    75% 65%,
+    80% 60%,
+    85% 65%,
+    90% 70%,
+    95% 65%,
+    100% 60%,
+    100% 0%
+  );
+}
+
+/* Line clamp for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
