@@ -1,9 +1,7 @@
-import { Sparkles, Github, Heart } from "lucide-react";
+import { Sparkles, Github, Code } from "lucide-react";
 import "./index.css";
 import { ThemeToggle } from "./features/theme";
-import { HeroSection } from "./features/hero";
-import { VibeDemo } from "./features/vibe-demo";
-import { VibePrinciples } from "./features/principles";
+import { Button, ThemeDemo } from "./components";
 
 function App() {
   return (
@@ -14,87 +12,36 @@ function App() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Sparkles size={24} className="neon-cyan" />
-              <h1 className="text-xl font-bold neon-pink">Vibe Coding</h1>
+              <h1 className="text-xl font-bold neon-pink">
+                React Vibe Starter
+              </h1>
             </div>
 
             <div className="flex items-center gap-4">
-              <nav>
-                <ul className="flex gap-6">
-                  <li>
-                    <a
-                      href="#principles"
-                      className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors"
-                    >
-                      Principles
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#demo"
-                      className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors"
-                    >
-                      Demo
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#about"
-                      className="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors"
-                    >
-                      About
-                    </a>
-                  </li>
-                </ul>
-              </nav>
               <ThemeToggle />
             </div>
           </div>
         </div>
       </header>
 
-      {/* Hero */}
-      <HeroSection />
-
       {/* Main Content */}
       <main className="py-12">
-        <div className="container mx-auto px-4 space-y-16">
-          {/* Principles Section */}
-          <section id="principles" className="scroll-mt-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Understanding Vibe Coding
-            </h2>
-            <VibePrinciples />
-          </section>
-
-          {/* Interactive Demo Section */}
-          <section id="demo" className="scroll-mt-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Experience It Yourself
-            </h2>
-            <VibeDemo />
-          </section>
-
-          {/* About Section */}
-          <section id="about" className="scroll-mt-20 max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              About This Project
-            </h2>
+        <div className="container mx-auto px-4">
+          <section className="max-w-3xl mx-auto">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-100 dark:border-gray-700">
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+                React Vite Starter Template
+              </h2>
+
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                This showcase was created to demonstrate the principles of "Vibe
-                Coding" - an emerging approach to software development that was
-                coined in early 2025.
+                Welcome to the React Vite Starter template! This is a minimal,
+                clean starting point for your React projects.
               </p>
+
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                The term refers to a style where developers leverage AI tools
-                and their intuition to guide code creation, describing what they
-                want in natural, evocative language instead of manually crafting
-                every line of code.
-              </p>
-              <p className="text-gray-700 dark:text-gray-300">
-                This project itself was built using React 19, TypeScript, and
-                Tailwind CSS 4, following modern best practices while embracing
-                the intuitive nature of vibe coding.
+                This template provides a solid foundation with modern tooling
+                and best practices to help you build robust web applications
+                quickly and efficiently.
               </p>
 
               <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
@@ -107,26 +54,37 @@ function App() {
                   <li>Tailwind CSS 4 for styling</li>
                   <li>Vite for blazing fast development</li>
                   <li>Lucide React for beautiful icons</li>
+                  <li>Dark mode support</li>
+                  <li>ESLint and Prettier configuration</li>
                 </ul>
               </div>
+
+              <div className="mt-6 flex justify-center gap-4">
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="flex items-center gap-2"
+                >
+                  <Code size={18} />
+                  <span>Start Building</span>
+                </Button>
+                <Button variant="outline">
+                  <span>Documentation</span>
+                </Button>
+              </div>
+
+              <ThemeDemo />
             </div>
           </section>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-8">
+      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6 mt-auto">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Heart size={16} className="neon-pink" />
-              <span className="text-gray-600 dark:text-gray-400">
-                Made with AI-assisted development
-              </span>
-            </div>
-
             <p className="text-gray-500 dark:text-gray-500">
-              © 2025 Vibe Coding. All rights reserved.
+              React Vite Starter Template
             </p>
 
             <a

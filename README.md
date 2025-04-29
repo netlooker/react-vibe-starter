@@ -1,25 +1,17 @@
 # React Vibe Starter
 
-A modern React 19 showcase demonstrating "Vibe Coding" principles with Tailwind CSS 4, TypeScript, and Vite. Experience how AI-assisted development can transform your workflow.
+A modern React 19 starter template with Tailwind CSS 4, TypeScript, and Vite. This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## What is Vibe Coding?
+## Features
 
-Vibe Coding, coined in early 2025, is an intuitive approach to programming that emphasises coding by "feel" rather than strict planning. Developers communicate with AI using natural language to rapidly build interfaces based on the desired "vibe" or experience.
-
-Key characteristics:
-
-- **Intuition-Driven Development**: Making decisions based on what feels right for users
-- **Natural Language Prompts**: Using plain language like "make it friendlier" or "add a subtle bounce"
-- **Rapid Iteration**: Quick cycles of prompt → code → run → feedback
-- **Flow Over Formality**: Maintaining creative momentum without getting bogged down in details
-
-## Showcase Features
-
-- ✨ **Interactive Vibe Demo**: Experience different button "vibes" through a simple interface
-- 💬 **Conversation Simulator**: See how developers might "talk" to AI about code changes
-- 🔍 **Principles Explorer**: Understand the benefits and challenges of Vibe Coding
-- 🌓 **Smart Theme Switching**: Seamless dark/light mode with system preference detection
-- 🎨 **Modern UI Elements**: Carefully crafted components with subtle animations
+- ⚡ **Vite** — Lightning fast development experience
+- 🔄 **React 19** — Latest React with hooks and improved performance
+- 🔒 **TypeScript** — Type safety with strict mode enabled
+- 🎨 **Tailwind CSS 4** — Utility-first CSS framework with dark mode support
+- 🌓 **Dark Mode** — Seamless dark/light mode with system preference detection
+- 🧩 **Component Structure** — Clean, feature-based organization
+- 🧹 **ESLint + Prettier** — Code quality and consistent formatting
+- 🔍 **Strict TypeScript** — Configured for maximum type safety
 
 ## Tech Stack
 
@@ -56,7 +48,7 @@ Visit `http://localhost:5173` to see the application in action.
 
 ## Project Structure
 
-The project follows a feature-based organisation pattern:
+The project follows a clean, feature-based organization pattern:
 
 ```
 react-vibe-starter/
@@ -64,11 +56,7 @@ react-vibe-starter/
 │   ├── assets/         # Component-used assets
 │   ├── components/     # Shared UI components
 │   ├── features/       # Feature-specific modules
-│   │   ├── hero/       # Hero section components
-│   │   ├── principles/ # Vibe coding concepts
-│   │   ├── theme/      # Dark/light theming
-│   │   ├── ui/         # Reusable UI elements
-│   │   └── vibe-demo/  # Interactive demonstrations
+│   │   └── theme/      # Dark/light theming
 │   ├── App.tsx         # Main application component
 │   ├── index.css       # Global styles
 │   └── main.tsx        # Application entry point
@@ -77,17 +65,14 @@ react-vibe-starter/
 
 ## Design Philosophy
 
-This project demonstrates:
+This starter template emphasizes:
 
-- **Feature-Based Code Organisation**: Grouping related components by domain rather than type
-- **Component Granularity**: Small, focused components with single responsibilities
+- **Feature-Based Organization**: Grouping related components by domain rather than type
+- **Type Safety**: Strict TypeScript configuration for robust code
 - **Responsive Design**: Fully adaptive layout for all devices
-- **Animation Subtlety**: Tasteful transitions that enhance rather than distract
+- **Dark Mode**: Class-based theming with system preference detection
+- **Performance**: Optimized for fast development and production builds
 - **Accessibility**: Semantic HTML with proper ARIA attributes
-
-## Try Vibe Coding Yourself
-
-The interactive demo shows how different "vibes" (fun, professional, energetic, calm) translate to different UI implementations through simple language descriptions rather than technical specifications.
 
 ## Available Scripts
 
