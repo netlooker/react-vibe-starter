@@ -2,6 +2,10 @@
 
 A modern React 19 starter template with Tailwind CSS 4, TypeScript, and Vite. This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## AI Generated Content & User Responsibility
+
+> Please be aware that this presentation and its contents were developed with the assistance of Artificial Intelligence (AI) tools. Examples and information are provided for illustrative purposes only. Use of this content is undertaken entirely at your own discretion and risk.
+
 ## Features
 
 - ⚡ **Vite** — Lightning fast development experience
