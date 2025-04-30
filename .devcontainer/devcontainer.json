@@ -1,0 +1,27 @@
+{
+  "name": "React Vibe Starter Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node",
+
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  "postCreateCommand": "",
+  "postAttachCommand": {
+    "server": "npm run dev"
+  },
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [5173],
+  "appPort": [5173],
+  "customizations": {
+    "codespaces": {
+      // Files to open automatically when the Codespace starts.
+      "openFiles": [
+        "src/App.tsx"
+      ]
+    }
+  }
+}
